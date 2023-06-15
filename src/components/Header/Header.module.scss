@@ -1,0 +1,168 @@
+@import "styles/scss/colors.scss";
+
+.container {
+ height: 70px;
+ padding: 0 50px 0 20px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.05);
+ background: #fff;
+ border-bottom: 1px solid transparent;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ z-index: 101;
+ .imgLogo {
+  width: 150px;
+  cursor: pointer;
+ }
+ .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: gray;
+  cursor: pointer;
+ }
+}
+
+.icon {
+ stroke: $ink_600;
+ width: 20px;
+}
+
+.popOverHeadMenu {
+ width: 280px;
+ border-radius: 8px;
+ .headInfo {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  padding: 0 10px;
+  box-sizing: border-box;
+
+  &_img {
+   width: 48px;
+   height: 48px;
+   img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+   }
+  }
+
+  &_person {
+   &_name {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #21232b;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+   }
+
+   &_position {
+    font-size: 14px;
+    color: #727e8b;
+    font-weight: 600;
+   }
+  }
+ }
+}
+
+.iconSidebarActive {
+ display: block;
+}
+.iconSidebarHidden {
+ display: none;
+}
+
+.mobileContainer {
+ position: fixed;
+ top: 70px;
+ //  left: 0;
+ width: 280px;
+ height: calc(100vh - 70px);
+ background-color: aquamarine;
+ z-index: 12;
+ margin-left: 0;
+ transition: 2s;
+}
+
+.person {
+ display: flex;
+ align-items: center;
+ cursor: pointer;
+ padding: 0 15px;
+ width: 40px;
+ height: 40px;
+
+ .avatarHeader {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+ }
+}
+
+.box {
+ display: flex;
+ align-items: center;
+ width: 250px;
+ border-radius: 8px;
+ padding: 24px 20px;
+ cursor: pointer;
+
+ .icon {
+  stroke: #637381;
+ }
+ .text {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #3d434a;
+  margin-left: 12px;
+ }
+}
+
+.overlay {
+ width: 100%;
+ height: calc(100vh - 72px);
+ z-index: 10;
+ background-color: rgba(0, 0, 0, 0.6);
+ position: absolute;
+ top: 72px;
+ left: 0;
+ cursor: pointer;
+}
+
+.unOverlay {
+ display: none;
+}
+
+@media screen and (max-width: 480px) {
+ .container {
+  padding: 0 15px 0 15px;
+
+  .iconSidebarActive,
+  .imgLogo,
+  .person {
+   flex: 1;
+  }
+
+  .person {
+   justify-content: end;
+   padding: 0;
+   img {
+    width: 40px;
+    height: 40px;
+   }
+  }
+ }
+}

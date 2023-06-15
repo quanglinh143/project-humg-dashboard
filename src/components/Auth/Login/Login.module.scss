@@ -1,0 +1,63 @@
+@import "styles/scss/colors.scss";
+
+.container {
+ width: 100%;
+ height: 100%;
+ display: flex;
+ gap: 20px;
+}
+.banner {
+ flex: 1;
+ height: 100%;
+
+ img {
+  display: inherit;
+  width: 100%;
+  height: 100%;
+ }
+}
+
+.form {
+ flex: 1;
+ display: flex;
+ justify-content: center;
+ margin-top: 5%;
+}
+
+.formItem {
+ width: 85%;
+}
+
+.boxInput {
+ width: 100%;
+}
+
+.title {
+ margin-bottom: 10px;
+}
+
+.label {
+ font-weight: 600;
+ margin-bottom: 5px;
+}
+
+.slogan {
+ margin-bottom: 20px;
+ color: #727e8b;
+}
+
+.loginBtn {
+ width: 85%;
+ height: 40px;
+ font-weight: 600;
+ font-size: 15px;
+ background-color: $primary_500;
+ margin-top: 20px;
+ &:hover {
+  background-color: $primary_500 !important;
+ }
+}
+
+.boxInput {
+ width: 100%;
+}

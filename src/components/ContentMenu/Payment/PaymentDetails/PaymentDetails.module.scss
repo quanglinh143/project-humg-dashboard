@@ -1,0 +1,105 @@
+@import "styles/scss/colors.scss";
+
+.container {
+ min-height: 60vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ .paymentCard {
+  width: 80%;
+  margin-top: 20px;
+  table {
+   width: 100%;
+
+   td {
+    text-align: center;
+   }
+  }
+  table,
+  th,
+  tr,
+  td {
+   border: 1px solid #ddd;
+   border-collapse: collapse;
+  }
+
+  .price {
+   color: $danger_550;
+  }
+ }
+}
+
+.listDetail {
+ margin-top: 40px;
+ &_img {
+  padding-top: 3px;
+  img {
+   width: 70px;
+  }
+ }
+}
+
+.listDetail_title {
+ margin-bottom: 5px;
+}
+
+.loading {
+ position: fixed;
+ top: 35%;
+ left: 50%;
+}
+
+.order {
+ margin-top: 40px;
+
+ &_title {
+  margin: 0;
+ }
+
+ &_status {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+  &_title {
+   margin: 0;
+  }
+
+  &_noti {
+   width: auto;
+   height: 40px;
+   padding: 8px 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: 500;
+   border-radius: 8px;
+   border: transparent;
+   color: $white;
+   box-sizing: border-box;
+  }
+
+  &_result {
+   background-color: $warning_400;
+   cursor: context-menu;
+  }
+
+  &_cancel {
+   background-color: $warning_400;
+   cursor: pointer;
+  }
+
+  &_transported {
+   display: flex;
+   gap: 12px;
+   &_notReceived {
+    background-color: $brown_300;
+    cursor: pointer;
+   }
+   &_received {
+    background-color: $warning_400;
+    cursor: pointer;
+   }
+  }
+ }
+}

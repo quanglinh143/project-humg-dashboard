@@ -1,0 +1,163 @@
+.container {
+ width: 100%;
+ height: calc(100vh - 70px);
+ display: flex;
+ justify-content: center;
+ .brand {
+  width: 85%;
+  // width: 800px;
+  margin: 20px 50px;
+  padding: 10px 25px 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(27, 27, 27, 0.08);
+  overflow-x: auto;
+
+  .table {
+   width: 100%;
+   border-collapse: collapse;
+
+   .rowHead {
+    th {
+     padding-bottom: 10px;
+    }
+   }
+
+   .brandItem {
+    border-bottom: 1px solid #dee2e6 !important;
+    td {
+     text-align: center;
+     padding: 20px 0;
+     color: #637381;
+    }
+
+    &:hover {
+     background-color: #f5f5f5;
+     cursor: pointer;
+    }
+   }
+  }
+ }
+}
+
+.brandHead {
+ display: flex;
+ justify-content: space-between;
+ margin-bottom: 30px;
+}
+
+.loading {
+ width: 100%;
+ height: calc(100vh - 70px);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.actions {
+ display: flex;
+ justify-content: center;
+ gap: 10px;
+ .edit {
+  stroke: #6b6b6b;
+ }
+ .bin {
+  stroke: #fa3e3e;
+ }
+}
+
+// update
+.form_updateBrand {
+ width: 60%;
+ height: 35px;
+ border: none;
+ outline: none;
+ border-bottom: 1px solid #555;
+}
+
+.modalUpdate {
+ align-items: end;
+ :global {
+  .ant-modal-body {
+   display: flex;
+   align-items: end;
+  }
+  .ant-modal-footer {
+   display: none;
+  }
+ }
+ &_btn {
+  margin-left: 10px;
+  &_update {
+   width: 100px;
+  }
+  &_update,
+  &_cancel {
+   height: 35px;
+   border: none;
+   outline: none;
+   padding: 9px 15px;
+   border-bottom: 1px solid #555;
+   cursor: pointer;
+   &:hover {
+    background-color: #676767;
+    color: #fff;
+   }
+  }
+  &_cancel {
+   margin-left: 8px;
+  }
+ }
+}
+
+.searchInput {
+ background: transparent;
+ height: 40px;
+ border: 1px solid rgba(145, 158, 171, 0.32);
+ width: 200px;
+ border-radius: 5px;
+ padding: 0 15px 0 30px;
+ color: #555 !important;
+ &:focus-visible {
+  outline: unset !important;
+ }
+}
+
+.buttonSort {
+ :global {
+  .ant-select-selector {
+   height: 40px !important;
+   display: flex;
+   align-items: center;
+  }
+ }
+}
+
+.searchForm {
+ position: relative;
+ color: #555;
+ .closeSearch {
+  position: absolute;
+  top: 37%;
+  left: 15px;
+  width: 15px;
+  height: 15px;
+  stroke: #676767;
+  cursor: pointer;
+ }
+ .closeIcon {
+  position: absolute;
+  top: 45%;
+  right: 15px;
+  width: 10px;
+  height: 10px;
+  stroke: #676767;
+  cursor: pointer;
+ }
+}
+
+.notfound {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}

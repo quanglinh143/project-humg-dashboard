@@ -1,0 +1,74 @@
+@import "styles/scss/colors.scss";
+
+.container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ min-height: 60vh;
+ .title {
+  margin-top: 10px;
+ }
+ .description {
+  margin-top: 4px;
+  color: $ink_300;
+  span {
+   color: $primary_500;
+  }
+ }
+}
+
+.table {
+ margin-top: 20px;
+ margin-bottom: 10px;
+ width: 75%;
+ border-radius: 10px;
+ overflow: hidden;
+ border-collapse: collapse;
+ thead {
+  height: 60px;
+  th {
+   background-color: $primary_500;
+   color: $white;
+   height: 60px;
+   font-family: OpenSans-Regular;
+  }
+ }
+
+ tbody {
+  td {
+   text-align: center;
+  }
+  tr {
+   height: 50px;
+  }
+  tr:hover {
+   background-color: $primary_300;
+   cursor: pointer;
+  }
+ }
+
+ tr:nth-child(even) {
+  background-color: $primary_300;
+ }
+
+ tr td a:last-child {
+  color: $black_400;
+  font-weight: 500;
+ }
+}
+
+.loading {
+ position: fixed;
+ top: 35%;
+ left: 50%;
+}
+
+@media screen and (max-width: 480px) {
+ .container {
+  padding: 0 10px;
+  .table {
+   padding: 0 20px;
+   width: 100%;
+  }
+ }
+}

@@ -1,0 +1,103 @@
+@import "styles/scss/colors.scss";
+.container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ background-color: #fafafa;
+ height: calc(100vh - 70px);
+ .coupon {
+  width: 85%;
+  min-height: 10vh;
+  margin: 10px 0;
+  padding: 10px 25px 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(27, 27, 27, 0.08);
+  .create {
+   width: 100%;
+   .title {
+    display: flex;
+    justify-content: space-between;
+    .title_text {
+     font-weight: 700;
+     text-transform: uppercase;
+     margin-bottom: 10px;
+    }
+   }
+  }
+ }
+
+ .couponList {
+  font-size: 14px;
+  color: #114739;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+   text-decoration: underline;
+  }
+ }
+}
+
+.actions {
+ display: flex;
+ justify-content: space-between;
+ margin-top: 18px;
+ margin-bottom: 24px;
+ .checked {
+  display: flex;
+  gap: 6px;
+  &_switch {
+   background-color: $primary_400 !important;
+  }
+  .checked_text {
+   font-size: 12px;
+   font-weight: 600;
+  }
+ }
+ .addNew {
+  background-color: $primary_400;
+  color: $white;
+  font-size: 14px;
+  height: 32px;
+  padding: 4px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  &:hover {
+   color: $white !important;
+   border-color: transparent !important;
+  }
+ }
+}
+
+.input {
+ margin-bottom: 18px;
+ &_title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+ }
+
+ &_value {
+  width: 100%;
+  height: 34px;
+  border-radius: 6px;
+  border: 1px solid $primary_300;
+  padding: 3px 12px;
+  box-sizing: border-box;
+  &:focus-visible {
+   outline: unset !important;
+  }
+ }
+
+ .datePicker {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #d6d6d6;
+  padding: 8px;
+ }
+}
+
+.endline {
+ border-bottom: 1px solid $black_100;
+}

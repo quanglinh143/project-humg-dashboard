@@ -1,0 +1,46 @@
+.paginate {
+ display: flex;
+ justify-content: center;
+ list-style: none;
+ gap: 10px;
+ :global {
+  .selected {
+   background-color: #175e4c;
+   color: #fff;
+   &:hover {
+    color: #fff;
+   }
+  }
+ }
+
+ li {
+  font-size: 14px;
+  font-weight: 500;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover {
+   color: #175e4c;
+  }
+
+  a {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+ }
+ li:first-child {
+  width: 70px;
+  padding: 0 5px;
+  color: #175e4c;
+ }
+ li:last-child {
+  width: 70px;
+  padding: 0 5px;
+  color: #175e4c;
+ }
+}
